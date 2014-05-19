@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+		<title>yPi.js sample page</title>
+        <link rel="stylesheet" type="text/css" href="css/dialog.css" />        
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="core/ypi_min-1.5.5.js"></script>
+		<script type="text/javascript" src="core/helper.js"></script>
+		<script type="text/javascript">
+		    ypi.df.init({
+                /*initState: "n1",
+                isAutostart: false,
+                isSoundEnabled: false,
+                isCommercial: false,*/
+                onload: function (options) {
+                    // init stuff
+                    avatar_1 =  ypi.df.createAvatar({ Name: "avatar1", Alias: "John Doe", BubbleId: "npc_avatar_1", isHistory: false, Speed: 150,
+                        onbubble: parseCustomMark,
+                        behavior: basicBehavior
+                    });                              
+                }
+            });
+           
+            $(document).ready(function () {
+                // force init function         
+                ypi.df.invokeInit();
+
+                //your story files:
+                var storyFile = "http://ypijs.org/files/Startkit/welcome.xml";
+                $("#T0").click(function () {
+                    ypi.df.gotoChapter({ chapterUrl: storyFile, nodeId: "n1" });
+                });
+                $("#T1").click(function () {
+                    ypi.df.gotoChapter({ chapterUrl: storyFile, nodeId: "n1" });
+                });
+                $("#T2").click(function () {
+                    ypi.df.gotoChapter({ chapterUrl: storyFile, nodeId: "n1" });
+                });
+            });
+		</script>
+	</head>
+	<body>
+	    <p>Click on Tag:<a href="#" id="T0">#first</a>, <a href="#" id="T1">#second</a>, <a href="#" id="T2">#third</a></p>	
+        <p>Well, here is some sample. File with XML should be on the same domain as this pages.</p><p>Or use cross-domain policy on source hosting to prevent "XML file not found" alert.</p>
+        <div class="region">
+            <span id="npc_avatar_1"></span>	  
+            <div id="avatar1"></div>  
+        </div>
+        <p>Answers in UL list: </p>
+        <div id="dialog"></div>  
+        <hr />
+        <p><a href="http://ypijs.org#licence">ypijs.org</a>&copy;2014</p> 
+	</body>	
+</html>

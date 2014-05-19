@@ -1,0 +1,51 @@
+﻿body 
+{
+    background:lightgray;
+}
+
+/*Base dialog element style*/
+#npc_avatar_1 
+{
+    position: absolute;
+    bottom: 70px;
+    left:5px;
+    width: 250px;
+    padding: 15px;
+    background: white; 
+    display:none;   
+}
+
+#npc_avatar_1:after 
+{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50px;
+    border-style: solid;
+    border-width: 5px 5px 0;
+    border-color: white transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+}
+
+#avatar1
+{
+    display:block;
+    position:absolute;
+    bottom:5px;
+    left:5px;
+    width:50px;
+    height:50px;
+    border:1px solid white;  
+}
+
+/*Bounding box*/
+.region
+{
+    position:relative;   
+    width: 290px;
+    height: 150px;    
+    border:1px solid black;       
+    background:darkgray;  
+}

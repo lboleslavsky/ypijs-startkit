@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dialog info="
+# Code generated automatically
+# by  dialog editor (c) 2011
+# please do not change it if possible.
+# Language version: EN , 03.04.2014 21:32
+">
+<case id="n1" text="Hi. Let me introduce you this component. \nMaybe it can be useful for your presentation purposes. \nMaybe not. \nHowever you can try it and download anyway..." target="avatar1" >
+<react  rel="n1" goto="n2" text="Ok, sounds good. " setter="_n+=1" />
+<react  rel="n1" goto="n3" text="No thanks!" setter="_n+=1" />
+</case>
+<case id="n2" text="Thank you!" target="avatar1" >
+</case>
+<case id="n3" text="Ok. Never mind. " target="avatar1" >
+</case>
+</dialog>
